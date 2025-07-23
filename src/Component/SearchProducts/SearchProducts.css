@@ -1,0 +1,30 @@
+/* search input */
+.search-products {
+  position: relative;
+}
+.search-products i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #888;
+  transform: translateY(-50%);
+}
+.search-products input {
+  padding-left: 35px;
+}
+.close-search {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.close-search:hover i {
+  color: black !important;
+}
+.close-search i {
+  font-size: 23px;
+}
+/* .scroll-search {
+  height: 100vh;
+  overflow-y: auto;
+} */

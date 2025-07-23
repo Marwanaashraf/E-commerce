@@ -1,0 +1,7 @@
+.brand{
+    border: 1px solid hsla(0, 0%, 50%, .411);
+    transition: all .6s;
+}
+.brand:hover{
+box-shadow:  1px 1px 7px 0px  var(--main-color);
+}

@@ -1,0 +1,23 @@
+.active{
+    color:var(--main-color) !important;
+    font-weight: bold;
+}
+.nav-link{
+    font-size: 18px;
+    transition: all .5s ;
+}
+.cart-count{
+    width: 19px;
+    height: 19px;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+}
+.cart-icon{
+    width: 25px;
+}
+.nav-link:hover{
+    color: var(--main-color);
+    font-weight: bold;
+
+}

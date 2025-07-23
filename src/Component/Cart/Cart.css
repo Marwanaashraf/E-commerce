@@ -1,0 +1,10 @@
+.cart-counter button {
+  border: 1px solid var(--main-color);
+  width: 35px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 5px;
+}

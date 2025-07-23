@@ -1,0 +1,7 @@
+.prod-detail button{
+height: 45px;
+transition: all .6s;
+}
+.prod-detail button:hover{
+background-color: #0aad0ae2 !important;
+}

@@ -1,0 +1,182 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+:root {
+  --main-color: #4fa74f;
+  --light-color: #f0f3f2;
+  --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+    rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+    rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+  --font-family: "Encode Sans Expanded", sans-serif;
+  --rating-color: #ffc908;
+}
+input::placeholder {
+  font-size: 19px;
+}
+.toaster {
+  z-index: 100000;
+}
+body {
+  font-family: var(--font-family) !important;
+  font-size: 19px !important;
+}
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+.rating-color {
+  color: var(--rating-color);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+/* products */
+.product {
+  transition: all 1s;
+}
+.product span {
+  font-size: 14px;
+}
+.product:hover {
+  box-shadow: 0 0 8px 1px var(--main-color);
+  border-radius: 5px;
+}
+.product-details {
+  position: relative;
+}
+.product button {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 1s;
+}
+.product:hover button {
+  transform: translateY(0%);
+  opacity: 1;
+}
+.heart {
+  width: 35px;
+  height: 35px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.heart i {
+  font-size: 20px !important;
+}
+.btn {
+  height: 42px;
+}
+.form-control {
+  height: 42px;
+}
+/* .product:hover {
+  box-shadow: var(--shadow);
+  border: solid 1px var(--main-color);
+}
+.product .btn {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+} */
+.text-main {
+  color: var(--main-color);
+}
+.bg-main {
+  background-color: var(--main-color) !important;
+}
+.bg-main-light {
+  background-color: var(--light-color) !important;
+}
+.loading {
+  z-index: 1000;
+  /* background-color: #263038 !important; */
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 1.5px solid var(--main-color);
+}
+.contain-form {
+  width: 85%;
+  margin: auto;
+}
+.forms {
+  background-image: url("./assets//images/light-patten.svg");
+  height: 100vh;
+  background-size: 100% 100%;
+}
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: var(--main-color);
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
