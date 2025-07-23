@@ -102,7 +102,7 @@ export default function Home() {
           <div className="products row g-3">
             {products.map((ele) => {
               return (
-                <div key={ele._id} className="col-lg-2 col-md-3 col-sm-6">
+                <div key={ele._id} className="col-lg-2 col-md-3 col-6">
                   <div className="product font-sm position-relative cursor-pointer p-1">
                     <Link to={"/product/" + ele._id}>
                       <img

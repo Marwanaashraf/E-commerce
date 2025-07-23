@@ -81,7 +81,7 @@ export default function SearchProducts(props) {
           {noResults == null ? (
             allProducts.map((ele) => {
               return (
-                <div key={ele._id} className="col-md-3 col-4">
+                <div key={ele._id} className="col-md-3 col-6">
                   <div className="product font-sm position-relative cursor-pointer p-1 h-100">
                     <Link to={"/product/" + ele._id}>
                       <img

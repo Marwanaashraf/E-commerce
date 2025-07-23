@@ -40,7 +40,7 @@ export default function Categories() {
           <div className="row g-3 my-3">
             {categories.map((ele) => {
               return (
-                <div className="col-md-3 col-sm-4">
+                <div className="col-md-3 col-6">
                   <div
                     id={ele._id}
                     onClick={getSpecificProducts}

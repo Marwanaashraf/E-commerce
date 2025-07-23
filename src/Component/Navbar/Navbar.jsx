@@ -31,7 +31,7 @@ export default function Navbar() {
     <>
     <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 start-0 end-0 z-1 p-3">
       <div className="container-fluid">
-        <NavLink className="navbar-brand">
+        <NavLink to="/home" className="navbar-brand">
           <img className="w-100" src={logo} alt="" />
         </NavLink>
         <button

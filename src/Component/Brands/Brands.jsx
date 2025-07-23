@@ -42,7 +42,7 @@ export default function Brands() {
           <div className="row g-2 my-3">
             {brands.map((ele) => {
               return (
-                <div className="col-lg-3 col-md-4 col-sm-6">
+                <div className="col-lg-3 col-md-4 col-6">
                   <div
                     id={ele._id}
                     onClick={getSpecificProducts}
