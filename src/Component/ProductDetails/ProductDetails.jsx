@@ -54,10 +54,10 @@ export default function ProductDetails() {
   }
   //cart
   let { addCart, setNumOfCartItems } = useContext(CartContext);
-  async function addToCart(id) {
+  async function addToCart() {
     setLoading(true);
-    let { data } = await addCart(id).catch((err) => {
-      console.log(err);
+    let {data} = await addCart(id).catch((error) => {
+      console.log(error);
       setLoading(false);
       Swal.fire({
         icon: "error",
@@ -65,15 +65,15 @@ export default function ProductDetails() {
         text: "Something went wrong!",
       });
     });
-    if (data.status == "success") {
-      setNumOfCartItems(data.numOfCartItems);
-      setLoading(false);
-      Swal.fire({
-        title: "Good job!",
-        text: `${data.message}`,
-        icon: "success",
-      });
-    }
+     if (data.status == "success") {
+       setNumOfCartItems(data.numOfCartItems);
+       setLoading(false);
+       Swal.fire({
+         title: "Good job!",
+         text: `${data.message}`,
+         icon: "success",
+       });
+     }
   }
   useEffect(() => {
     getProductDetails();
