@@ -31,6 +31,7 @@ import Witchlist from "./Component/Witchlist/Witchlist.jsx";
 import { AllProductsProvider } from "./Context/AllProducts.js";
 import SearchProducts from "./Component/SearchProducts/SearchProducts.jsx";
 import PaymentMethod from "./Component/PaymentMethod/PaymentMethod.jsx";
+import WelcomePage from "./Component/WelcomePage/WelcomePage.jsx";
 export default function App() {
   let Query = new QueryClient();
   let routes = createBrowserRouter([
@@ -167,6 +168,7 @@ export default function App() {
           ),
         },
         { index: true, path: "login", element: <Login /> },
+        { path: "E-commerce", element: <WelcomePage /> },
         { path: "signup", element: <Signup /> },
         { path: "forgetpassword", element: <ForgetPassword /> },
         { path: "forgetpassword/verifycode", element: <VerifyCode /> },
