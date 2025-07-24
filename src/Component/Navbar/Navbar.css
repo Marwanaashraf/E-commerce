@@ -21,3 +21,10 @@
     font-weight: bold;
 
 }
+.nav-query{
+    /* display: none; */
+}
+.nav-query i{
+font-size: 24px;
+margin-top: 10px;
+}
