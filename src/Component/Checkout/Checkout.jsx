@@ -15,7 +15,7 @@ export default function Checkout() {
   //cartId from params
   let { id, payment } = useParams();
   //url back if you finish payment
-  let url = "http://localhost:3000/cart";
+  let url = "https://marwanaashraf.github.io/cart/allorders";
   let {setNumOfCartItems} = useContext(CartContext)
   let validationSchema = Yup.object({
     details: Yup.string()
