@@ -168,9 +168,9 @@ export default function Cart() {
                   {cart.products?.map((ele) => {
                     return (
                       <>
-                        <div className="col-md-10">
+                        <div className="col-10">
                           <div className="row g-3 align-items-center">
-                            <div className="col-md-2">
+                            <div className="col-md-2 col-4">
                               <div className="">
                                 <img
                                   className="w-100"
@@ -179,12 +179,12 @@ export default function Cart() {
                                 />
                               </div>
                             </div>
-                            <div className="col-md-10">
+                            <div className="col-md-10 col-8">
                               <div className="">
                                 <h4 className="fw-bolder">
                                   {ele.product?.title
                                     .split(" ")
-                                    .slice(0, 8)
+                                    .slice(0, 4)
                                     .join(" ")}
                                 </h4>
                                 <span className="font-sm">{ele.price}EGP</span>
@@ -201,7 +201,7 @@ export default function Cart() {
                             </div>
                           </div>
                         </div>
-                        <div className="col-md-2">
+                        <div className="col-2">
                           <div className="cart-counter d-flex ">
                             <button
                               onClick={() => {

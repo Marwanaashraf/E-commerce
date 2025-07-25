@@ -121,7 +121,7 @@ export default function AllOrders() {
                                   </h4> */}
                                       <div className="col-12">
                                         <div className="row align-items-center">
-                                          <div className="col-sm-3">
+                                          <div className="col-3">
                                             <div className="">
                                               <img
                                                 className="w-100"
@@ -130,7 +130,7 @@ export default function AllOrders() {
                                               />
                                             </div>
                                           </div>
-                                          <div className="col-sm-9">
+                                          <div className="col-9">
                                             <div className="">
                                               <span className="text-main fs-6">
                                                 {item.product.category.name}

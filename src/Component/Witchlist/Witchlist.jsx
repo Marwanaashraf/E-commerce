@@ -103,7 +103,7 @@ export default function Witchlist() {
                       <>
                         <div className="col-md-10">
                           <div className="row g-3 align-items-center">
-                            <div className="col-md-2">
+                            <div className="col-md-2 col-4">
                               <div className="">
                                 <img
                                   className="w-100"
@@ -112,10 +112,10 @@ export default function Witchlist() {
                                 />
                               </div>
                             </div>
-                            <div className="col-md-10">
+                            <div className="col-md-10 col-8">
                               <div className="">
                                 <h5 className="fw-bolder">
-                                  {ele.title.split(" ").slice(0, 8).join(" ")}
+                                  {ele.title.split(" ").slice(0, 4).join(" ")}
                                 </h5>
                                 <span className="font-sm">{ele.price}EGP</span>
                                 <br />
