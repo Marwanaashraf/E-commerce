@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { FavouriteContext } from "../../Context/FavouriteContext.js";
 import { CartContext } from "../../Context/CartContext.js";
 import axios from "axios";
-import $ from "jquery";
+import $, { data } from "jquery";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 export default function ProductCard({ product, setLoading }) {
@@ -28,6 +28,8 @@ export default function ProductCard({ product, setLoading }) {
         toast.success("product deleted in wishlist");
       }
     }
+    console.log(data);
+    
   }
   //cart
   let { addCart, setNumOfCartItems, cartItems, setCartItems } =
@@ -49,7 +51,7 @@ export default function ProductCard({ product, setLoading }) {
       });
     }
   }
-  console.log(cartItems);
+  console.log(favouriteList);
 
   return (
     <div key={product._id} className="col-xl-2 col-lg-3 col-md-4 col-6">
@@ -79,7 +81,7 @@ export default function ProductCard({ product, setLoading }) {
           }}
           className="heart d-flex justify-content-center align-items-center shadow position-absolute top-0 end-0 mt-1 me-1"
         >
-          {favouriteList.includes(product._id) ? (
+          {favouriteList.find((ele) => ele._id === product._id || ele === product._id) ? (
             <i
               id={product._id}
               heart="solid"
@@ -89,7 +91,7 @@ export default function ProductCard({ product, setLoading }) {
             <i
               id={product._id}
               heart="regular"
-              className="fa-regular fa-heart"
+              className="fa-regular fa-heart text-main"
             ></i>
           )}
         </div>

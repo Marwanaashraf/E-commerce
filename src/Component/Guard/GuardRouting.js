@@ -5,6 +5,6 @@ export default function GuardRouting({ children }) {
   if (localStorage.getItem("userToken") != null) {
     return children;
   } else {
-    return <Navigate to="/login" />;
+    return <Navigate to="/" />;
   }
 }

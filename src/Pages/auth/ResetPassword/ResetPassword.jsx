@@ -39,7 +39,7 @@ export default function ResetPassword() {
     console.log(req);
   }
   function goToLogin() {
-    navigate("/login");
+    navigate("/");
   }
   let formik = useFormik({
     initialValues: {

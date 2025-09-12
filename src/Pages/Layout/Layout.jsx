@@ -35,10 +35,8 @@ export default function Layout() {
     let { data } = await getWishList().catch((err) => {
       console.log(err);
     });
-    if (data.status == "success") {
-      data.data?.forEach((ele) => {
-        favouriteList.push(ele._id);
-      });
+    if (data) {
+      setFavouriteList(data.data);
     }
   }
   useEffect(() => {

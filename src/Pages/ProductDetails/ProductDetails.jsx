@@ -123,9 +123,7 @@ export default function ProductDetails() {
                   {/* category and favourite */}
                   <div className="text-main fs-6 d-flex align-items-center">
                     {/* category */}
-                    <span className="text-xs">
-                      {product.category?.name}
-                    </span>
+                    <span className="text-xs">{product.category?.name}</span>
 
                     {/* wishlist */}
                     <div
@@ -134,7 +132,9 @@ export default function ProductDetails() {
                       }}
                       className="heart d-flex justify-content-center align-items-center shadow-sm ms-auto"
                     >
-                      {favouriteList.includes(product._id) ? (
+                      {favouriteList.find(
+                        (ele) => ele._id === product._id || ele === product._id
+                      ) ? (
                         <i
                           id={product._id}
                           heart="solid"
@@ -144,7 +144,7 @@ export default function ProductDetails() {
                         <i
                           id={product._id}
                           heart="regular"
-                          className="fa-regular fa-heart text-black"
+                          className="fa-regular fa-heart"
                         ></i>
                       )}
                     </div>

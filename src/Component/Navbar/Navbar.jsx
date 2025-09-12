@@ -24,7 +24,7 @@ export default function Navbar() {
   function logOut() {
     setToken(null);
     localStorage.removeItem("userToken");
-    navigate("/login");
+    navigate("/");
   }
   return (
     <>
@@ -137,27 +137,27 @@ export default function Navbar() {
               {token != null ? (
                 <>
                   <ul className="navbar-nav ms-auto mb-2 mb-lg-0 nav-icons">
-                  <li className="nav-item ">
-                    <NavLink
-                      to="searchproducts"
-                      className="nav-link cursor-pointer "
-                    >
-                      <i className="fa-solid fa-search fs-5"></i>
-                    </NavLink>
-                  </li>
-                  <li className="nav-item ">
-                    <NavLink className="nav-link" to="/profile">
-                      <i className="fa-solid fa-user fs-5"></i>
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <Link className="nav-link position-relative" to="/cart">
-                      <i className="fa-solid fa-cart-shopping fs-5"></i>
-                      <span className="cart-count fs-6  rounded p-1 d-flex justify-content-center align-items-center ">
-                        {numOfCartItems}
-                      </span>
-                    </Link>
-                  </li>
+                    <li className="nav-item ">
+                      <NavLink
+                        to="/searchproducts"
+                        className="nav-link cursor-pointer "
+                      >
+                        <i className="fa-solid fa-search fs-5"></i>
+                      </NavLink>
+                    </li>
+                    <li className="nav-item ">
+                      <NavLink className="nav-link" to="/profile">
+                        <i className="fa-solid fa-user fs-5"></i>
+                      </NavLink>
+                    </li>
+                    <li className="nav-item">
+                      <Link className="nav-link position-relative" to="/cart">
+                        <i className="fa-solid fa-cart-shopping fs-5"></i>
+                        <span className="cart-count fs-6  rounded p-1 d-flex justify-content-center align-items-center ">
+                          {numOfCartItems}
+                        </span>
+                      </Link>
+                    </li>
                   </ul>
                   <li className="nav-item">
                     <span className="nav-link cursor-pointer" onClick={logOut}>
@@ -172,7 +172,7 @@ export default function Navbar() {
                       className={({ isActive }) =>
                         isActive ? "nav-link active" : "nav-link"
                       }
-                      to="/login"
+                      to="/"
                     >
                       Login
                     </NavLink>
@@ -182,7 +182,7 @@ export default function Navbar() {
                       className={({ isActive }) =>
                         isActive ? "nav-link active" : "nav-link"
                       }
-                      to="Signup"
+                      to="/Signup"
                     >
                       Signup
                     </NavLink>

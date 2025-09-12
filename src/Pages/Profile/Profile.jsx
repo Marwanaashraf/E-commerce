@@ -17,7 +17,7 @@ export default function Profile() {
   function logOut() {
     setToken(null);
     localStorage.removeItem("userToken");
-    navigate("/login");
+    navigate("/");
   }
   return (
     <>

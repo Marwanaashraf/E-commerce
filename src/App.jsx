@@ -168,8 +168,7 @@ export default function App() {
             </GuardRouting>
           ),
         },
-        { index: true, path: "login", element: <Login /> },
-        { path: "E-commerce", element: <WelcomePage /> },
+        { index: true, element: <Login /> },
         { path: "signup", element: <Signup /> },
         { path: "forgetpassword", element: <ForgetPassword /> },
         { path: "forgetpassword/verifycode", element: <VerifyCode /> },
@@ -180,7 +179,7 @@ export default function App() {
         { path: "*", element: <NotFound /> },
       ],
     },
-  ]);
+  ],{basename:"/E-commerce"});
   return (
     <div>
       <QueryClientProvider client={Query}>

@@ -9,8 +9,6 @@ export default function Witchlist() {
   let [products, setProducts] = useState([]);
   let [loading, setLoading] = useState(false);
   let [removeLoading, setRemoveLoading] = useState({});
-
-  //getCart
   let { getWishList, deleteInWishlist, setFavouriteList } =
     useContext(FavouriteContext);
   let navigate = useNavigate();

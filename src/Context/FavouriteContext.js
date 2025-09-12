@@ -1,8 +1,5 @@
 import axios from "axios";
 import { createContext, useState } from "react";
-
-
-
 export let FavouriteContext = createContext();
 export function FavouriteProvider({ children }) {
   let [favouriteList, setFavouriteList] = useState([]);

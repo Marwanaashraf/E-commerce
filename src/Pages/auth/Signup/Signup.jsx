@@ -258,7 +258,7 @@ export default function Signup() {
           <p className="text-center fw-semibold">
             Already have an account? <span
               className="text-decoration-underline text-main cursor-pointer"
-              onClick={()=>{navigate("/login")}}
+              onClick={()=>{navigate("/")}}
             > 
               Login
             </span>
