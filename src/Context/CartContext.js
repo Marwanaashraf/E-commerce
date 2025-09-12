@@ -3,6 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export let CartContext = createContext();
 export function CartProvider({ children }) {
   let [numOfCartItems, setNumOfCartItems] = useState(0);
+  let [cartItems, setCartItems] = useState({});
   async function getUserCart() {
     return await axios.get("https://ecommerce.routemisr.com/api/v1/cart", {
       headers: {
@@ -64,7 +65,9 @@ export function CartProvider({ children }) {
         getUserCart,
         deleteProductInCart,
         updateProductQuantity,
-        clearCart
+        clearCart,
+        cartItems,
+        setCartItems,
       }}
     >
       {children}

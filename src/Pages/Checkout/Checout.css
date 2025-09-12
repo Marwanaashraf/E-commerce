@@ -1,0 +1,21 @@
+.check-img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border: 1.5px solid #E8E8E8;
+    border-radius: 8px;
+    padding: 5px;
+}
+.quantity-product{
+    width: 25px;
+    height: 25px;
+    background-color: #4B4B4B;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

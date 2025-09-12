@@ -5,7 +5,6 @@ import logo from "../../assets/images/freshcart-logo.svg";
 import $ from "jquery";
 import { UserContext } from "../../Context/userContext.js";
 import { CartContext } from "../../Context/CartContext.js";
-import SearchProducts from "../SearchProducts/SearchProducts.jsx";
 export default function Navbar() {
   let { token, setToken } = useContext(UserContext);
   let { numOfCartItems } = useContext(CartContext);
@@ -29,7 +28,7 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 start-0 end-0 z-1 p-3">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 start-0 end-0 z-2 p-3">
         <div className="container-fluid">
           <NavLink to="/home" className="navbar-brand">
             <img className="w-100" src={logo} alt="" />
@@ -143,18 +142,18 @@ export default function Navbar() {
                       to="searchproducts"
                       className="nav-link cursor-pointer "
                     >
-                      <i className="fa-solid fa-search"></i>
+                      <i className="fa-solid fa-search fs-5"></i>
                     </NavLink>
                   </li>
                   <li className="nav-item ">
                     <NavLink className="nav-link" to="/profile">
-                      <i className="fa-solid fa-user"></i>
+                      <i className="fa-solid fa-user fs-5"></i>
                     </NavLink>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link position-relative" to="/cart">
-                      <i className="fa-solid fa-cart-shopping"></i>
-                      <span className="cart-count position-absolute top-0 end-0 rounded p-1 d-flex justify-content-center align-items-center ">
+                      <i className="fa-solid fa-cart-shopping fs-5"></i>
+                      <span className="cart-count fs-6  rounded p-1 d-flex justify-content-center align-items-center ">
                         {numOfCartItems}
                       </span>
                     </Link>

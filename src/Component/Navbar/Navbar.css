@@ -7,11 +7,14 @@
     transition: all .5s ;
 }
 .cart-count{
-    width: 19px;
-    height: 19px;
+    width: 20px;
+    height: 20px;
     background-color: var(--main-color);
     color: white;
     font-weight: bold;
+    position: absolute;
+    top: -11%;
+    right: 0%;
 }
 .cart-icon{
     width: 25px;

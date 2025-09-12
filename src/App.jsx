@@ -1,37 +1,38 @@
 import React, { useContext, useEffect } from "react";
-import Layout from "./Component/Layout/Layout.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./Component/Home/Home.jsx";
-import Categories from "./Component/Categories/Categories.jsx";
-import Products from "./Component/Products/Products.jsx";
-import Brands from "./Component/Brands/Brands.jsx";
-import Cart from "./Component/Cart/Cart.jsx";
-import Profile from "./Component/Profile/Profile.jsx";
-import Login from "./Component/Login/Login.jsx";
-import Signup from "./Component/Signup/Signup.jsx";
-import NotFound from "./Component/NotFound/NotFound.jsx";
-import ForgetPassword from "./Component/ForgetPassword/ForgetPassword.jsx";
-import { UserContext, UserProvider } from "./Context/userContext.js";
+import Home from "./Pages/Home/Home.jsx";
 import GuardRouting from "./Component/Guard/GuardRouting.js";
-import VerifyCode from "./Component/VerifyCode/VerifyCode.jsx";
-import { EmailProvider } from "./Context/emailContext.js";
-import ResetPassword from "./Component/ResetPassword/ResetPassword.jsx";
-import SpecificCategory from "./Component/SpecificCategory/SpecificCategory.jsx";
-import SpecificBrand from "./Component/SpecificBrand/SpecificBrand.jsx";
-import ProductDetails from "./Component/ProductDetails/ProductDetails.jsx";
+import Layout from "./Pages/Layout/Layout.jsx";
+import Categories from "./Pages/Categories/Categories.jsx";
+import Products from "./Pages/Products/Products.jsx";
+import SpecificCategory from "./Pages/SpecificCategory/SpecificCategory.jsx";
+import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx";
+import SearchProducts from "./Pages/SearchProducts/SearchProducts.jsx";
+import Brands from "./Pages/Brands/Brands.jsx";
+import SpecificBrand from "./Pages/SpecificBrand/SpecificBrand.jsx";
+import Cart from "./Pages/Cart/Cart.jsx";
+import Profile from "./Pages/Profile/Profile.jsx";
+import Witchlist from "./Pages/Witchlist/Witchlist.jsx";
+import Checkout from "./Pages/Checkout/Checkout.jsx";
+import PaymentMethod from "./Pages/PaymentMethod/PaymentMethod.jsx";
+import AllOrders from "./Pages/AllOrders/AllOrders.jsx";
+import EditProfile from "./Pages/EditProfile/EditProfile.jsx";
+import UpdateLogedPassword from "./Pages/UpdateLogedPassword/UpdateLogedPassword.jsx";
+import Login from "./Pages/auth/Login/Login.jsx";
+import WelcomePage from "./Pages/WelcomePage/WelcomePage.jsx";
+import Signup from "./Pages/auth/Signup/Signup.jsx";
+import ForgetPassword from "./Pages/auth/ForgetPassword/ForgetPassword.jsx";
+import VerifyCode from "./Pages/auth/VerifyCode/VerifyCode.jsx";
+import ResetPassword from "./Pages/auth/ResetPassword/ResetPassword.jsx";
+import NotFound from "./Pages/NotFound/NotFound.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { CartProvider } from "./Context/CartContext.js";
-import Checkout from "./Component/Checkout/Checkout.jsx";
-import AllOrders from "./Component/AllOrders/AllOrders.jsx";
-import EditProfile from "./Component/EditProfile/EditProfile.jsx";
-import UpdateLogedPassword from "./Component/UpdateLogedPassword/UpdateLogedPassword.jsx";
+import { UserProvider } from "./Context/userContext.js";
 import { FavouriteProvider } from "./Context/FavouriteContext.js";
-import Witchlist from "./Component/Witchlist/Witchlist.jsx";
+import { CartProvider } from "./Context/CartContext.js";
 import { AllProductsProvider } from "./Context/AllProducts.js";
-import SearchProducts from "./Component/SearchProducts/SearchProducts.jsx";
-import PaymentMethod from "./Component/PaymentMethod/PaymentMethod.jsx";
-import WelcomePage from "./Component/WelcomePage/WelcomePage.jsx";
+import { EmailProvider } from "./Context/emailContext.js";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
 export default function App() {
   let Query = new QueryClient();
   let routes = createBrowserRouter([
@@ -115,7 +116,7 @@ export default function App() {
           path: "profile",
           element: (
             <GuardRouting>
-              <Profile />
+              <Profile  />
             </GuardRouting>
           ),
         },

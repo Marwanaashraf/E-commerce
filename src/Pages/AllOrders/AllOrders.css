@@ -1,0 +1,17 @@
+.details-btn{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    border-radius: 10px;
+    padding: 5px 15px;
+    transition: all .6s;
+}
+.details-btn:hover{
+    color: white;
+    background-color: var(--main-color);
+
+}
+/* .table{
+    width: 95%;
+    margin: auto;
+} */

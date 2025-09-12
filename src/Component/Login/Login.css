@@ -1,7 +1,0 @@
-.forgetpass-link{
-    font-size: 20px;
-    transition: all .6s;
-}
-.forgetpass-link:hover{
-    color: var(--main-color);
-}

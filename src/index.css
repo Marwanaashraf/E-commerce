@@ -1,23 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
 :root {
-  --main-color: #4fa74f;
+  --main-color: #009689;
   --light-color: #f0f3f2;
   --shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
     rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
     rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
-  --font-family: "Encode Sans Expanded", sans-serif;
+  --font-family: "Roboto", sans-serif;
   --rating-color: #ffc908;
+}
+/* forms */
+.forms {
+  /* background-color: #F8F9FA; */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 100px; */
+}
+.contain-form {
+  width: 40%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.form-btn {
+  height: 42px;
+  background-color: var(--main-color);
+  color: white !important;
+  font-size: 17px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.form-btn:hover {
+  background-color: #35afa0 !important;
+}
+
+.form-btn:disabled{
+  opacity: .5 !important;
+  cursor: default;
+}
+.form-control {
+  height: 42px;
 }
 input::placeholder {
   font-size: 19px;
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 1.8px solid var(--main-color);
 }
 .toaster {
   z-index: 100000;
 }
 body {
   font-family: var(--font-family) !important;
-  font-size: 19px !important;
+  /* font-size: 19px !important; */
 }
 a,
 a:hover {
@@ -29,6 +74,9 @@ a:hover {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.text-xs{
+  font-size: 14px;
 }
 /* products */
 .product {
@@ -45,8 +93,8 @@ a:hover {
   position: relative;
 }
 .product button {
-  transform: translateY(100%);
-  opacity: 0;
+  transform: translateY(115%);
+  opacity:  0;
   transition: all 1s;
 }
 .product:hover button {
@@ -63,12 +111,7 @@ a:hover {
 .heart i {
   font-size: 20px !important;
 }
-.btn {
-  height: 42px;
-}
-.form-control {
-  height: 42px;
-}
+
 /* .product:hover {
   box-shadow: var(--shadow);
   border: solid 1px var(--main-color);
@@ -91,23 +134,16 @@ a:hover {
 .bg-main-light {
   background-color: var(--light-color) !important;
 }
+.payment-card{
+  width: 40%;
+  padding: 40px;
+}
+/* loading */
 .loading {
   z-index: 1000;
   /* background-color: #263038 !important; */
 }
-.form-control:focus {
-  box-shadow: none;
-  border: 1.5px solid var(--main-color);
-}
-.contain-form {
-  width: 85%;
-  margin: auto;
-}
-.forms {
-  background-image: url("./assets//images/light-patten.svg");
-  height: 100vh;
-  background-size: 100% 100%;
-}
+
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
@@ -182,54 +218,76 @@ a:hover {
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .contain-form{
+    width: 90%;
+  }
   .nav-query {
     display: flex;
   }
-  .nav-icons{
+  .nav-icons {
     display: none;
   }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  .contain-form{
+    width: 80%;
+  }
   .nav-query {
     display: flex;
   }
-  .nav-icons{
+  .nav-icons {
     display: none;
   }
- 
+   
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  .contain-form{
+    width: 70%;
+  }
   .nav-query {
     display: flex;
   }
-  .nav-icons{
+  .nav-icons {
     display: none;
   }
- 
+  .checkout-details{
+    border-left: none;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  .contain-form{
+    width: 60%;
+  }
   .nav-query {
     display: none;
   }
-  .nav-icons{
+  .nav-icons {
     display: flex;
   }
- 
+  .checkout-details{
+    border-left: 1.8px solid;
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  .contain-form{
+    width: 35%;
+  }
   .nav-query {
     display: none;
   }
-  .nav-icons{
+  .nav-icons {
     display: flex;
   }
- 
+  .checkout-details{
+    border-left: 1.8px solid;
+  }
 }
