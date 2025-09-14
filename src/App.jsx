@@ -170,7 +170,7 @@ export default function App() {
         { path: "*", element: <NotFound /> },
       ],
     },
-  ],{basename:"/E-commerce"});
+  ]);
   return (
     <div>
       <QueryClientProvider client={Query}>

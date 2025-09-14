@@ -14,9 +14,9 @@ export default function Checkout() {
   //loading btn
   let [loading, setLoading] = useState(false);
   //cartId from params
-  let { id, payment } = useParams();
+  let { id, payment } = useParams();  
   //url back if you finish payment
-  let url = "https://Marwanaashraf.github.io/E-commerce/cart";
+  let url = `${window.location.origin}/cart`;
   let { setNumOfCartItems, cartItems, setCartItems } = useContext(CartContext);
   let validationSchema = Yup.object({
     details: Yup.string()
