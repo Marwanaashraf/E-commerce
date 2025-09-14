@@ -1,4 +1,4 @@
-# marwanashraf-naqlasehia 
+# Fresh Cart
 
 A full-featured e-commerce website that allows users to browse products by categories and brands. Users can view product details, add items to their wishlist or shopping cart, and proceed to checkout with both cash and card payment options. The platform also enables users to track their orders and view detailed order information.
 
