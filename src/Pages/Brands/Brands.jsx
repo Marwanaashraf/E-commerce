@@ -16,7 +16,6 @@ export default function Brands() {
       .catch((err) => {
         console.log(err);
       });
-    console.log(data.data);
     setLoading(false);
     setBrands(data.data);
   }

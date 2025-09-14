@@ -50,7 +50,7 @@ export default function Login() {
       setdecodingData(data.user)
       //6-go to home
       navigate("/home");
-      console.log(data);
+      window.location.reload()
       //7-toast hello
       setTimeout(() => {
         toast.success(`Hello ${data.user.name}`, {

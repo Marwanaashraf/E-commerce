@@ -28,7 +28,6 @@ export default function ProductCard({ product, setLoading }) {
         toast.success("product deleted in wishlist");
       }
     }
-    console.log(data);
     
   }
   //cart
@@ -51,10 +50,8 @@ export default function ProductCard({ product, setLoading }) {
       });
     }
   }
-  console.log(favouriteList);
 
   return (
-    <div key={product._id} className="col-xl-2 col-lg-3 col-md-4 col-6">
       <div className="product position-relative cursor-pointer p-1 overflow-hidden">
         <Link to={"/product/" + product._id}>
           <img
@@ -150,6 +147,5 @@ export default function ProductCard({ product, setLoading }) {
           </button>
         )}
       </div>
-    </div>
   );
 }

@@ -1,11 +1,15 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { EmailContext } from "../../Context/emailContext.js";
 import { UserContext } from "../../Context/userContext.js";
 import { CartContext } from "../../Context/CartContext.js";
 import { FavouriteContext } from "../../Context/FavouriteContext.js";
 import Navbar from "../../Component/Navbar/Navbar.jsx";
+import Footer from "../../Component/footer/footer.jsx";
+import SearchProducts from "../SearchProducts/SearchProducts.jsx";
 export default function Layout() {
+  //search
+  let [isSearch, setSearch] = useState(false);
   let { email, setEmail } = useContext(EmailContext);
   let { setToken } = useContext(UserContext);
   let { getUserCart, setNumOfCartItems, setCartItems } =
@@ -46,10 +50,12 @@ export default function Layout() {
   }, []);
   return (
     <div>
-      <Navbar />
+      <Navbar setSearch={setSearch} />
       <div className="my-5">
         <Outlet />
       </div>
+      <Footer />
+      {isSearch ? <SearchProducts setSearch={setSearch} /> : ""}
     </div>
   );
 }

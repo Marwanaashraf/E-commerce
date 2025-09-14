@@ -4,7 +4,7 @@ import { AllProductsContext } from "../../Context/AllProducts.js";
 import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import ProductCard from "../../Component/ProductCard/ProductCard.jsx";
-export default function SearchProducts(props) {
+export default function SearchProducts({ setSearch }) {
   //all products
   let [allProducts, setAllProducts] = useState([]);
   let { getAllProducts } = useContext(AllProductsContext);
@@ -13,7 +13,6 @@ export default function SearchProducts(props) {
   //no results search
   let [noResults, setNoResults] = useState(null);
   let [loading, setLoading] = useState(false);
-  let navigate = useNavigate();
 
   //search products
   async function getEveryProducts() {
@@ -33,7 +32,7 @@ export default function SearchProducts(props) {
       setAllProducts(result);
       setLoading(false);
     }
-    console.log(result);
+
     if (result.length == 0) {
       setNoResults(val);
       setLoading(false);
@@ -43,8 +42,15 @@ export default function SearchProducts(props) {
     }
   }
   function closeSearch() {
-    navigate("/home");
+    setSearch(false);
   }
+  useEffect(() => {
+    document.addEventListener("keyup", (e) => {
+      if (e.key == "Escape") {
+        closeSearch();
+      }
+    });
+  }, []);
   useEffect(() => {
     getEveryProducts();
   }, []);
@@ -56,7 +62,7 @@ export default function SearchProducts(props) {
         <title>Search </title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <div className="s-products  pt-5">
+      <div className="s-products position-fixed start-0 top-0 end-0 top-0 bottom-0 z-3 bg-white pt-5 overflow-auto  ">
         <div className="container">
           <div className="row g-2 align-items-center my-2">
             <div className="col-11">
@@ -69,10 +75,11 @@ export default function SearchProducts(props) {
                   id="pSearch"
                   className="form-control"
                 />
-                {loading? <i className="fa-solid fa-spinner fa-spin fs-6"></i>: 
-                
-                <i className="fa-solid fa-search fs-6"></i>
-                }
+                {loading ? (
+                  <i className="fa-solid fa-spinner fa-spin fs-6"></i>
+                ) : (
+                  <i className="fa-solid fa-search fs-6"></i>
+                )}
               </div>
             </div>
             <div className="col-1">
@@ -84,10 +91,17 @@ export default function SearchProducts(props) {
               </div>
             </div>
           </div>
-          <div className="products row g-3">
+          <div className="products row g-3 my-3">
             {noResults == null ? (
               allProducts.map((ele) => {
-                return <ProductCard product={ele} setLoading={setLoading} />;
+                return (
+                  <div
+                    className="col-xl-2 col-lg-3 col-md-4 col-6"
+                    key={ele._id}
+                  >
+                    <ProductCard product={ele} setLoading={setLoading} />
+                  </div>
+                );
               })
             ) : (
               <div className="col-md-12">

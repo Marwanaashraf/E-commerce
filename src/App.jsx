@@ -6,7 +6,6 @@ import Categories from "./Pages/Categories/Categories.jsx";
 import Products from "./Pages/Products/Products.jsx";
 import SpecificCategory from "./Pages/SpecificCategory/SpecificCategory.jsx";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx";
-import SearchProducts from "./Pages/SearchProducts/SearchProducts.jsx";
 import Brands from "./Pages/Brands/Brands.jsx";
 import SpecificBrand from "./Pages/SpecificBrand/SpecificBrand.jsx";
 import Cart from "./Pages/Cart/Cart.jsx";
@@ -18,7 +17,6 @@ import AllOrders from "./Pages/AllOrders/AllOrders.jsx";
 import EditProfile from "./Pages/EditProfile/EditProfile.jsx";
 import UpdateLogedPassword from "./Pages/UpdateLogedPassword/UpdateLogedPassword.jsx";
 import Login from "./Pages/auth/Login/Login.jsx";
-import WelcomePage from "./Pages/WelcomePage/WelcomePage.jsx";
 import Signup from "./Pages/auth/Signup/Signup.jsx";
 import ForgetPassword from "./Pages/auth/ForgetPassword/ForgetPassword.jsx";
 import VerifyCode from "./Pages/auth/VerifyCode/VerifyCode.jsx";
@@ -80,14 +78,7 @@ export default function App() {
             </GuardRouting>
           ),
         },
-        {
-          path: "searchproducts",
-          element: (
-            <GuardRouting>
-              <SearchProducts /> 
-            </GuardRouting>
-          ),
-        },
+       
         {
           path: "brands",
           element: (

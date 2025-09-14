@@ -38,7 +38,7 @@ export default function SpecificBrand() {
         <Toaster position="top-center" />
       </div>
       {loading ? (
-        <Loading/>
+        <Loading />
       ) : (
         <div className="container py-5">
           {noBrands ? (
@@ -100,7 +100,14 @@ export default function SpecificBrand() {
           ) : (
             <div className="products row g-3">
               {products.map((ele) => {
-                return <ProductCard product={ele} setLoading={setLoading} />;
+                return (
+                  <div
+                    className="col-xl-2 col-lg-3 col-md-4 col-6"
+                    key={ele._id}
+                  >
+                    <ProductCard product={ele} setLoading={setLoading} />
+                  </div>
+                );
               })}
             </div>
           )}

@@ -1,0 +1,19 @@
+i{
+    transition: all .5s;
+}
+.fa-facebook:hover{
+color:blue;
+}
+.fa-linkedin:hover{
+color:dodgerblue;
+}
+.fa-github:hover{
+color:blue;
+}
+.fresh:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+footer{
+    margin-top: 90px;
+}

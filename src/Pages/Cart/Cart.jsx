@@ -34,7 +34,6 @@ export default function Cart() {
       });
     });
     if (data.status == "success") {
-      console.log(data.data);
       setCart(data.data);
       setCartItems(data.data);
       setLoading(false);
@@ -110,7 +109,6 @@ export default function Cart() {
       getCart();
       setLoading(false);
     }
-    console.log(data);
   }
   function navigateToCheckout(id) {
     navigate(`/checkout/${id}`);

@@ -52,7 +52,9 @@ export default function Home() {
           <div className="container py-5">
             <div className="products row g-3">
               {products.map((ele) => {
-                return <ProductCard product={ele} setLoading={setLoading} />;
+                return <div className="col-xl-2 col-lg-3 col-md-4 col-6" key={ele._id}>
+                  <ProductCard product={ele} setLoading={setLoading} /> 
+                </div> ;
               })}
             </div>
           </div>

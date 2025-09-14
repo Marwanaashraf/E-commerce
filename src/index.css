@@ -10,6 +10,9 @@
   --font-family: "Roboto", sans-serif;
   --rating-color: #ffc908;
 }
+.cursor-pointer{
+  cursor: pointer;
+}
 /* forms */
 .forms {
   /* background-color: #F8F9FA; */

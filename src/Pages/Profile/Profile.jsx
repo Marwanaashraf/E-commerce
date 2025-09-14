@@ -11,7 +11,6 @@ export default function Profile() {
   //   setUserName(jwtDecode(localStorage.getItem("userToken")).name);
   // }
 
-  console.log(decodingData);
 
   let navigate = useNavigate();
   function logOut() {

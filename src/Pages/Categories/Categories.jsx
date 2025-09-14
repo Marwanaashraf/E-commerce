@@ -13,7 +13,6 @@ export default function Categories() {
     let { data } = await axios.get(
       "https://ecommerce.routemisr.com/api/v1/categories"
     );
-    console.log(data.data);
     setLoading(false);
     setCategories(data.data);
   }

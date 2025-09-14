@@ -5,7 +5,17 @@ import logo from "../../assets/images/freshcart-logo.svg";
 import $ from "jquery";
 import { UserContext } from "../../Context/userContext.js";
 import { CartContext } from "../../Context/CartContext.js";
-export default function Navbar() {
+export let links = [
+  { path: "/home", html: "Home" },
+  { path: "/products", html: "Products" },
+  { path: "/categories", html: "Categories" },
+  { path: "/brands", html: "Brands" },
+  { path: "/cart", html: "Cart" },
+  { path: "/cart/allorders", html: "Orders" },
+  { path: "/witchlist", html: "Witchlist" },
+  { path: "/profile", html: "Profile" },
+];
+export default function Navbar({ setSearch }) {
   let { token, setToken } = useContext(UserContext);
   let { numOfCartItems } = useContext(CartContext);
   let navigate = useNavigate();
@@ -26,6 +36,7 @@ export default function Navbar() {
     localStorage.removeItem("userToken");
     navigate("/");
   }
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 start-0 end-0 z-2 p-3">
@@ -138,12 +149,14 @@ export default function Navbar() {
                 <>
                   <ul className="navbar-nav ms-auto mb-2 mb-lg-0 nav-icons">
                     <li className="nav-item ">
-                      <NavLink
-                        to="/searchproducts"
-                        className="nav-link cursor-pointer "
+                      <span
+                        onClick={() => {
+                          setSearch(true);
+                        }}
+                        className="nav-link cursor-pointer text-dark"
                       >
                         <i className="fa-solid fa-search fs-5"></i>
-                      </NavLink>
+                      </span>
                     </li>
                     <li className="nav-item ">
                       <NavLink className="nav-link" to="/profile">

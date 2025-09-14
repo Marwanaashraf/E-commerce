@@ -80,7 +80,6 @@ export default function ProductDetails() {
   useEffect(() => {
     getProductDetails();
   }, []);
-  console.log(product);
 
   return (
     <>
@@ -101,7 +100,7 @@ export default function ProductDetails() {
             ""
           )}
 
-          <div className="container pt-5">
+          <div className="container py-5">
             <div className="row g-4 align-items-center">
               {/* slider */}
               <div className="col-md-3">

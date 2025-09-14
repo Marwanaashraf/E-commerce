@@ -2,4 +2,9 @@
 .payment-visa {
   height: 100px;
 }
-
+@media only screen and (max-width: 600px) {
+  .payment-cash,
+  .payment-visa {
+    height: 120px;
+  }
+}
