@@ -39,7 +39,7 @@ export default function ForgetPassword() {
     }
   }
   function canselProcess() {
-    navigate("/login");
+    navigate("/");
   }
   let formik = useFormik({
     initialValues: {
