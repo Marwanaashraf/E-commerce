@@ -26,12 +26,12 @@ export default function Categories() {
   }, []);
   return (
     <>
-     <Helmet>
+      <Helmet>
         <meta charSet="utf-8" />
         <title>Categories </title>
       </Helmet>
       {loading ? (
-        <Loading/>
+        <Loading />
       ) : (
         <div className="container pt-5">
           <h1 className="text-main fw-bolder text-center">Categories</h1>
@@ -42,15 +42,16 @@ export default function Categories() {
                   <div
                     id={ele._id}
                     onClick={getSpecificProducts}
-                    className="category shadow rounded-3 h-100 cursor-pointer text-center"
+                    className="category border rounded-3 h-100 cursor-pointer text-center d-flex align-items-center"
                   >
                     <img
-                      className="w-100"
+                      style={{ width: "100px" }}
+                      className="ms-1"
                       src={ele.image}
                       alt={ele.name}
                       loading="lazy"
                     />
-                    <div id={ele._id} className="p-2">
+                    <div id={ele._id} className="ms-2">
                       <p className="text-main">{ele.name}</p>
                     </div>
                   </div>

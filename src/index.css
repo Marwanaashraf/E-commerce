@@ -26,7 +26,8 @@
   width: 40%;
   margin: auto;
   background-color: white;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  border: 1.5px solid #D1D5DC;
+  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; */
   padding: 30px;
   border-radius: 10px;
 }

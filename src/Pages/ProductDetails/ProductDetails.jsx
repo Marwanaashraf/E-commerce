@@ -100,7 +100,7 @@ export default function ProductDetails() {
             ""
           )}
 
-          <div className="container py-5">
+          <div style={{marginTop:"120px"}} className="container py-5 rounded-4 border ">
             <div className="row g-4 align-items-center">
               {/* slider */}
               <div className="col-md-3">
